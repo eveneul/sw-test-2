@@ -1,0 +1,84 @@
+footer {
+  position: relative;
+  padding: 88px 48px 40px;
+  background-color: $white;
+
+  h3 {
+    width: 420px;
+    margin-bottom: 24px;
+    img {
+      width: 100%;
+      filter: invert(0%) sepia(0%) saturate(12%) hue-rotate(257deg)
+        brightness(0%) contrast(104%);
+    }
+  }
+
+  .footer__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .footer__content--address {
+    display: flex;
+    flex-direction: column;
+
+    .address {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 4px;
+
+      span {
+        @include typo-body-md;
+        font-weight: 400;
+        color: $black;
+      }
+    }
+
+    .copy {
+      @include typo-body-md;
+      font-weight: 400;
+      color: $black;
+    }
+  }
+
+  .footer__content--sns {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    li {
+      padding: 4px 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      i {
+        width: 24px;
+        height: 24px;
+        display: block;
+
+        &.instagram {
+          background: url("/assets/icons/ico_instagram.svg") no-repeat
+            center/cover;
+        }
+
+        &.youtube {
+          background: url("/assets/icons/ico_youtube.svg") no-repeat
+            center/cover;
+        }
+
+        &.kakao {
+          background: url("/assets/icons/ico_kakao.svg") no-repeat center/cover;
+        }
+      }
+
+      span {
+        @include typo-body-lg;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@mixin button {
+  position: relative;
+  padding: 16px;
+  padding-left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.32s;
+  border-radius: 999px;
+  backdrop-filter: blur(16px);
+  background-color: $white10;
+  max-width: fit-content;
+  height: 80px;
+  border: none;
+  span {
+    @include typo-body-lg;
+    color: $white;
+  }
+  i {
+    width: 48px;
+    height: 48px;
+    background-color: $blue;
+    border-radius: 50%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("/assets/icons/ico_arrow_right.svg") no-repeat
+        center/cover;
+    }
+  }
+
+  &:hover {
+    background-color: $blue;
+    span {
+      color: $white;
+    }
+  }
+}
+
+@mixin button_gray {
+  position: relative;
+  padding: 16px;
+  padding-left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.32s;
+  border-radius: 999px;
+  backdrop-filter: blur(16px);
+  background-color: $black005;
+  height: 80px;
+  border: none;
+  max-width: fit-content;
+  cursor: pointer;
+  span {
+    @include typo-body-lg;
+    color: $black;
+  }
+  i {
+    width: 48px;
+    height: 48px;
+    background-color: $blue;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("/assets/icons/ico_arrow_right.svg") no-repeat
+        center/cover;
+    }
+  }
+
+  &:hover {
+    background-color: $blue;
+    span {
+      color: $white;
+    }
+  }
+}
+
+@mixin button_thumbnail {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px 12px 12px;
+  gap: 16px;
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  background-color: $black005;
+  overflow: hidden;
+  transition: all 0.32s;
+  max-width: fit-content;
+  cursor: pointer;
+
+  figure {
+    border-radius: 16px;
+    width: 160px;
+    height: 90px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  span {
+    @include typo-body-xl;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.32s;
+    gap: 16px;
+    color: $black;
+
+    i {
+      width: 40px;
+      height: 40px;
+      background-color: $blue;
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url("/assets/icons/ico_arrow_right.svg") no-repeat
+          center/cover;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $blue;
+
+    span {
+      // @include difference;
+      color: $yellow;
+    }
+  }
+}
